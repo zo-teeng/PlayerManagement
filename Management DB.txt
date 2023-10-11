@@ -1,0 +1,37 @@
+CREATE SCHEMA `management` DEFAULT CHARACTER SET utf8 ;
+
+CREATE TABLE `management`.`player` (
+  `backNum` VARCHAR(20) NOT NULL,
+  `name` VARCHAR(20) NOT NULL,
+  `age` VARCHAR(20) NOT NULL,
+  `height` VARCHAR(20) NOT NULL,
+  `weight` VARCHAR(20) NOT NULL,
+  `position` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`backNum`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE `management`.`injuryplayer` (
+  `backNum` VARCHAR(20) NOT NULL,
+  `name` VARCHAR(20) NOT NULL,
+  `age` VARCHAR(20) NOT NULL,
+  `height` VARCHAR(20) NOT NULL,
+  `weight` VARCHAR(20) NOT NULL,
+  `position` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`backNum`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE `management`.`user` (
+  `id` VARCHAR(20) NOT NULL,
+  `pwd` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+insert into player values('3','김혜성','26','183','80','IF');
+insert into injuryplayer values('16','최원준','27','185','85','OF');
+
+select * from player;
+select * from injuryplayer;
